@@ -1,24 +1,17 @@
 
 # The dataset root directory
-path: D:\PY_Code\Test\Pottery_dts
+path: D:\PY_Code\Test\Pottery_dts2
 
 # Relative paths to the image folders (or file lists)
 train: images/train  # training images (relative to 'path')
 val: images/val      # validation images (relative to 'path')
 test:               # test images (optional)
+nc: 13
+names: ['Bowl', 'Decorative vase', 'Fish tail vase', 'Plate', 'Plum vase', 'Pomegranate vase', 'Soup spoon', 'Spring vase', 'Tea wash', 'Teacup', 'Teapot', 'Water glass', 'Winter melon vase']
 
-# Classes: assign a unique number to each class name
-names:
-  0: Bowl
-  1: Decorative vase
-  2: Fish tail vase
-  3: Plate
-  4: Plum vase
-  5: Pomegranate vase
-  6: Soup spoon
-  7: Spring vase
-  8: Tea wash
-  9: Teacup
-  10: Teapot
-  11: Water glass
-  12: Winter melon vase
+roboflow:
+  workspace: zhipl
+  project: ceramics-2
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/zhipl/ceramics-2/dataset/2

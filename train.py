@@ -4,7 +4,7 @@ import torch
 
 def main():
     # Load a pretrained YOLO model (recommended for training)
-    model = YOLO("yolov8x.pt")
+    model = YOLO("yolo11s.pt")
     torch.backends.cudnn.benchmark = True  # Tăng tốc độ GPU
     model.model = torch.compile(model.model)
 
@@ -18,7 +18,7 @@ def main():
     epochs=50,
     batch=4,
     imgsz=640,
-    device='cuda',
+    device=0,
     amp=True
 )
 
